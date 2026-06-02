@@ -343,7 +343,9 @@ color:#dff5ff;
 
 }
 
+/* ========================= */
 /* PROJEKTE */
+/* ========================= */
 
 .projects{
 
@@ -357,11 +359,11 @@ color:#dff5ff;
 
     font-size:4rem;
 
+    letter-spacing:5px;
+
     color:#36d5ff;
 
     margin-bottom:80px;
-
-    letter-spacing:5px;
 
 }
 
@@ -370,7 +372,7 @@ color:#dff5ff;
     display:grid;
 
     grid-template-columns:
-    repeat(auto-fit,minmax(500px,1fr));
+    repeat(auto-fit,minmax(450px,1fr));
 
     gap:40px;
 
@@ -378,15 +380,13 @@ color:#dff5ff;
 
 .project-card{
 
+    position:relative;
+
+    height:420px;
+
     overflow:hidden;
 
-    border-radius:30px;
-
-    background:
-    rgba(255,255,255,.04);
-
-    border:
-    1px solid rgba(54,213,255,.15);
+    border-radius:25px;
 
     transition:.4s;
 
@@ -394,22 +394,43 @@ color:#dff5ff;
 
 .project-card:hover{
 
-    transform:
-    translateY(-10px);
+    transform:translateY(-10px);
 
     box-shadow:
-    0 0 35px rgba(54,213,255,.3);
+    0 0 40px rgba(54,213,255,.4);
 
 }
 
 .project-image{
 
-    height:280px;
+    position:absolute;
+
+    inset:0;
+
+    background-size:cover;
+
+    background-position:center;
+
+    transition:.6s;
+
+}
+
+.project-card:hover .project-image{
+
+    transform:scale(1.08);
+
+}
+
+.project-overlay{
+
+    position:absolute;
+
+    inset:0;
 
     background:
     linear-gradient(
-        135deg,
-        rgba(54,213,255,.15),
+        to top,
+        rgba(0,0,0,.9),
         rgba(0,0,0,.2)
     );
 
@@ -417,25 +438,67 @@ color:#dff5ff;
 
 .project-content{
 
+    position:absolute;
+
+    bottom:0;
+
     padding:35px;
+
+    z-index:2;
 
 }
 
 .project-content h3{
 
-    font-size:2rem;
+    font-size:2.2rem;
 
-    margin-bottom:15px;
+    margin-bottom:12px;
 
-    color:#36d5ff;
+    color:white;
 
 }
 
 .project-content p{
 
-    color:#b8c8d6;
+    color:#d0dce6;
 
-    line-height:1.8;
+    line-height:1.7;
+
+}
+
+/* POSTSYSTEM */
+
+.postsystem .project-image{
+
+    background-image:
+    url("images/postsystem.webp");
+
+}
+
+/* HUB */
+
+.hub .project-image{
+
+    background-image:
+    url("images/hub.jpg");
+
+}
+
+/* BUNKER */
+
+.bunker .project-image{
+
+    background-image:
+    url("images/bunker.jpg");
+
+}
+
+/* EVENTS */
+
+.events .project-image{
+
+    background-image:
+    url("images/events.jpg");
 
 }
 
