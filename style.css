@@ -342,3 +342,109 @@ color:#dff5ff;
     }
 
 }
+
+/* PROJEKTE */
+
+.projects{
+
+    padding:150px 8%;
+
+}
+
+.projects h2{
+
+    text-align:center;
+
+    font-size:4rem;
+
+    color:#36d5ff;
+
+    margin-bottom:80px;
+
+    letter-spacing:5px;
+
+}
+
+.project-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(500px,1fr));
+
+    gap:40px;
+
+}
+
+.project-card{
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(54,213,255,.15);
+
+    transition:.4s;
+
+}
+
+.project-card:hover{
+
+    transform:
+    translateY(-10px);
+
+    box-shadow:
+    0 0 35px rgba(54,213,255,.3);
+
+}
+
+.project-image{
+
+    height:280px;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(54,213,255,.15),
+        rgba(0,0,0,.2)
+    );
+
+}
+
+.project-content{
+
+    padding:35px;
+
+}
+
+.project-content h3{
+
+    font-size:2rem;
+
+    margin-bottom:15px;
+
+    color:#36d5ff;
+
+}
+
+.project-content p{
+
+    color:#b8c8d6;
+
+    line-height:1.8;
+
+}
+
+@media(max-width:700px){
+
+    .project-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
