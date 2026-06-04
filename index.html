@@ -218,6 +218,60 @@
     </form>
 
 </section>
+
+<script>
+
+document
+.getElementById("applicationForm")
+.addEventListener("submit", async function(e){
+
+e.preventDefault();
+
+const mc =
+document.getElementById("mcname").value;
+
+const dc =
+document.getElementById("discordname").value;
+
+const age =
+document.getElementById("age").value;
+
+const reason =
+document.getElementById("reason").value;
+
+const webhook =
+https://discord.com/api/webhooks/1512177353256730665/uUNlBPMkWm4oSX0Rh3FhdgXnsoQ9m9revebR5VPzBdROXxzVlynD9iwoK61mBag4UwVV;
+
+await fetch(webhook,{
+
+method:"POST",
+
+headers:{
+"Content-Type":"application/json"
+},
+
+body:JSON.stringify({
+
+content:
+"📩 Neue NEO Bewerbung\\n\\n"+
+"🎮 MC: "+mc+"\\n"+
+"💬 Discord: "+dc+"\\n"+
+"🎂 Alter: "+age+"\\n\\n"+
+"📝 "+reason
+
+})
+
+});
+
+alert(
+"Deine Bewerbung wurde abgeschickt!"
+);
+
+this.reset();
+
+});
+
+</script>
     
 </body>
 </html>
