@@ -511,3 +511,90 @@ color:#dff5ff;
     }
 
 }
+
+.application{
+
+    padding:150px 8%;
+
+    text-align:center;
+
+}
+
+.application h2{
+
+    font-size:4rem;
+
+    color:#36d5ff;
+
+    margin-bottom:20px;
+
+}
+
+.application p{
+
+    margin-bottom:40px;
+
+    color:#c7d3dd;
+
+}
+
+.application form{
+
+    max-width:700px;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+.application input,
+.application textarea{
+
+    background:
+    rgba(255,255,255,.05);
+
+    border:
+    1px solid rgba(255,255,255,.1);
+
+    padding:18px;
+
+    border-radius:15px;
+
+    color:white;
+
+    font-size:1rem;
+
+}
+
+.application textarea{
+
+    min-height:180px;
+
+    resize:vertical;
+
+}
+
+.application button{
+
+    padding:18px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:1rem;
+
+    background:#36d5ff;
+
+    color:black;
+
+    font-weight:bold;
+
+}
