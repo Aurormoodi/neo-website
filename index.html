@@ -250,14 +250,48 @@ headers:{
 "Content-Type":"application/json"
 },
 
-body:JSON.stringify({
+body: JSON.stringify({
 
-content:
-"📩 Neue NEO Bewerbung\\n\\n"+
-"🎮 MC: "+mc+"\\n"+
-"💬 Discord: "+dc+"\\n"+
-"🎂 Alter: "+age+"\\n\\n"+
-"📝 "+reason
+embeds: [{
+
+title: "📩 Neue NEO Bewerbung",
+
+color: 3447003,
+
+fields: [
+
+{
+name: "🎮 Minecraft",
+value: mc,
+inline: true
+},
+
+{
+name: "💬 Discord",
+value: dc,
+inline: true
+},
+
+{
+name: "🎂 Alter",
+value: age,
+inline: true
+},
+
+{
+name: "📝 Begründung",
+value: reason
+}
+
+],
+
+footer: {
+text: "NEO Bewerbungssystem"
+},
+
+timestamp: new Date()
+
+}]
 
 })
 
