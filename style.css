@@ -1412,3 +1412,112 @@ color:#dff5ff;
     0 0 25px rgba(54,213,255,.4);
 
 }
+
+/* ========================= */
+/* REGELWERK */
+/* ========================= */
+
+.rules,
+.agb{
+
+    padding:120px 8%;
+
+    text-align:center;
+
+}
+
+.rules-container,
+.agb-container{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:50px;
+
+    border-radius:25px;
+
+    background:
+    rgba(255,255,255,.04);
+
+    border:
+    1px solid rgba(255,255,255,.08);
+
+}
+
+.rules h2,
+.agb h2{
+
+    color:#36d5ff;
+
+    font-size:4rem;
+
+    margin-bottom:25px;
+
+}
+
+.rules-text{
+
+    color:#c7d3dd;
+
+    margin-bottom:40px;
+
+}
+
+.rules-points{
+
+    display:grid;
+
+    gap:15px;
+
+    margin-bottom:40px;
+
+}
+
+.rule-item{
+
+    padding:18px;
+
+    border-radius:12px;
+
+    background:
+    rgba(54,213,255,.08);
+
+    border:
+    1px solid rgba(54,213,255,.15);
+
+}
+
+.rules-btn{
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    border-radius:999px;
+
+    border:1px solid #36d5ff;
+
+    color:#36d5ff;
+
+    text-decoration:none;
+
+}
+
+.rules-btn:hover{
+
+    background:#36d5ff;
+
+    color:#000;
+
+}
+
+.agb p{
+
+    color:#c7d3dd;
+
+    line-height:1.8;
+
+    margin-bottom:20px;
+
+}
