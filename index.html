@@ -813,6 +813,33 @@ menuBtn.addEventListener("click", () => {
     </div>
 
 </section>
+
+<script>
+
+const modal =
+document.getElementById("termsModal");
+
+const accept =
+document.getElementById("acceptTerms");
+
+if(localStorage.getItem("neo_terms") === "accepted"){
+
+    modal.style.display = "none";
+
+}
+
+accept.addEventListener("click", () => {
+
+    localStorage.setItem(
+        "neo_terms",
+        "accepted"
+    );
+
+    modal.style.display = "none";
+
+});
+
+</script>
     
 </body>  
 </html>
