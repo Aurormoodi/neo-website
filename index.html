@@ -294,6 +294,19 @@
             required
         >
 
+<select id="activity" required>
+
+    <option value="">
+        Aktivität auswählen
+    </option>
+
+    <option>Täglich</option>
+    <option>Mehrmals pro Woche</option>
+    <option>1–2 Mal pro Woche</option>
+    <option>Wochenende</option>
+
+</select>
+        
         <textarea
             id="reason"
             placeholder="Warum möchtest du NEO beitreten?"
@@ -324,6 +337,9 @@ document.getElementById("discordname").value;
 
 const age =
 document.getElementById("age").value;
+
+    const activity =
+document.getElementById("activity").value;
 
 const reason =
 document.getElementById("reason").value;
@@ -367,6 +383,8 @@ value: age,
 inline: true
 },
 
+"⚡ Aktivität: "+activity+"\n"+
+    
 {
 name: "📝 Begründung",
 value: reason
@@ -395,8 +413,6 @@ this.reset();
 });
 
 </script>
-   
-console.log("NEO Bewerbungssystem gestartet");
 
 </body>
 </html>
