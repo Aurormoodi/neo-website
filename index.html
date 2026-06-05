@@ -8,6 +8,36 @@
 </head>
 <body>
 
+<div id="sidebar" class="sidebar">
+
+    <a href="#hero">Start</a>
+
+    <a href="#stats">NEO in Zahlen</a>
+
+    <a href="#story">Geschichte</a>
+
+    <a href="#team">Team</a>
+
+    <a href="#projects">Projekte</a>
+
+    <a href="#roadmap">Roadmap</a>
+
+    <a href="#faq">FAQ</a>
+
+    <a href="#youtube">YouTube</a>
+
+    <a href="#discord">Discord</a>
+
+    <a href="#application">Bewerbung</a>
+
+</div>
+
+<button id="menuBtn" class="menu-btn">
+
+    ☰
+
+</button>
+    
 <div class="stars"></div>
 
 <section class="hero">
@@ -623,37 +653,22 @@ this.reset();
 console.log("NEO Bewerbungssystem gestartet")
     
 </script>
+
+<script>
+
+const sidebar =
+document.getElementById("sidebar");
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+menuBtn.addEventListener("click", () => {
+
+    sidebar.classList.toggle("active");
+
+});
+
+</script>
     
-</body>
-
-    <div id="sidebar" class="sidebar">
-
-    <a href="#hero">Start</a>
-
-    <a href="#stats">NEO in Zahlen</a>
-
-    <a href="#story">Geschichte</a>
-
-    <a href="#team">Team</a>
-
-    <a href="#projects">Projekte</a>
-
-    <a href="#roadmap">Roadmap</a>
-
-    <a href="#faq">FAQ</a>
-
-    <a href="#youtube">YouTube</a>
-
-    <a href="#discord">Discord</a>
-
-    <a href="#application">Bewerbung</a>
-
-</div>
-
-<button id="menuBtn" class="menu-btn">
-
-    ☰
-
-</button>
-    
+</body>  
 </html>
