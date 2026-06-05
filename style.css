@@ -769,3 +769,145 @@ color:#dff5ff;
     font-size:1rem;
 
 }
+
+.youtube-section{
+
+    padding:150px 8%;
+
+}
+
+.youtube-box{
+
+    max-width:1000px;
+
+    margin:auto;
+
+    padding:50px;
+
+    background:rgba(255,255,255,.03);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:25px;
+
+    text-align:center;
+
+}
+
+.youtube-box h2{
+
+    color:#36d5ff;
+
+    font-size:4rem;
+
+    margin-bottom:25px;
+
+}
+
+.yt-description{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:#c7d3dd;
+
+    line-height:1.8;
+
+}
+
+.yt-stats{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    flex-wrap:wrap;
+
+    margin:50px 0;
+
+}
+
+.yt-stat{
+
+    min-width:180px;
+
+    padding:25px;
+
+    background:rgba(255,255,255,.03);
+
+    border-radius:15px;
+
+}
+
+.yt-stat h3{
+
+    color:#36d5ff;
+
+    font-size:2rem;
+
+}
+
+.yt-stat span{
+
+    color:#c7d3dd;
+
+}
+
+.yt-coming-soon{
+
+    margin-bottom:40px;
+
+}
+
+.yt-coming-soon h3{
+
+    color:#36d5ff;
+
+    margin-bottom:15px;
+
+}
+
+.yt-coming-soon ul{
+
+    list-style:none;
+
+    padding:0;
+
+}
+
+.yt-coming-soon li{
+
+    margin:10px 0;
+
+    color:#c7d3dd;
+
+}
+
+.youtube-btn{
+
+    display:inline-block;
+
+    padding:15px 35px;
+
+    border:1px solid #36d5ff;
+
+    border-radius:999px;
+
+    color:#36d5ff;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+.youtube-btn:hover{
+
+    background:#36d5ff;
+
+    color:#000;
+
+}
