@@ -1302,3 +1302,113 @@ color:#dff5ff;
     0 0 20px rgba(54,213,255,.4);
 
 }
+
+/* ========================= */
+/* TRAILER */
+/* ========================= */
+
+.trailer{
+
+    padding:150px 8%;
+
+    text-align:center;
+
+}
+
+.trailer-container{
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+.trailer h2{
+
+    font-size:4rem;
+
+    color:#36d5ff;
+
+    margin-bottom:20px;
+
+}
+
+.trailer-subtitle{
+
+    color:#c7d3dd;
+
+    max-width:700px;
+
+    margin:0 auto 50px auto;
+
+    line-height:1.8;
+
+}
+
+.video-wrapper{
+
+    position:relative;
+
+    width:100%;
+
+    aspect-ratio:16/9;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(54,213,255,.25);
+
+    box-shadow:
+    0 0 40px rgba(54,213,255,.15);
+
+}
+
+.video-wrapper iframe{
+
+    width:100%;
+
+    height:100%;
+
+}
+
+.trailer-text{
+
+    margin-top:35px;
+
+    color:#c7d3dd;
+
+    line-height:1.8;
+
+}
+
+.trailer-btn{
+
+    display:inline-block;
+
+    margin-top:30px;
+
+    padding:15px 35px;
+
+    border-radius:999px;
+
+    text-decoration:none;
+
+    color:#36d5ff;
+
+    border:1px solid #36d5ff;
+
+    transition:.3s;
+
+}
+
+.trailer-btn:hover{
+
+    background:#36d5ff;
+
+    color:#000;
+
+    box-shadow:
+    0 0 25px rgba(54,213,255,.4);
+
+}
