@@ -1,1 +1,261 @@
+/* ========================= */
+/*          NEO PASS         */
+/* ========================= */
 
+body{
+    margin:0;
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#111;
+    color:white;
+}
+
+.pass-container{
+
+    max-width:1300px;
+
+    margin:auto;
+
+    padding:40px;
+
+}
+
+.pass-container h1{
+
+    text-align:center;
+
+    color:#ff8c00;
+
+    font-size:60px;
+
+    margin-bottom:40px;
+
+    text-shadow:0px 0px 15px orange;
+
+}
+
+.playerBox{
+
+    background:#1d1d1d;
+
+    border:2px solid orange;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    margin-bottom:35px;
+
+}
+
+.playerBox input{
+
+    width:300px;
+
+    padding:12px;
+
+    font-size:18px;
+
+    border:none;
+
+    border-radius:8px;
+
+    outline:none;
+
+}
+
+.playerBox button{
+
+    padding:12px 25px;
+
+    font-size:18px;
+
+    background:orange;
+
+    color:black;
+
+    border:none;
+
+    cursor:pointer;
+
+    border-radius:8px;
+
+    margin-left:15px;
+
+    transition:.25s;
+
+}
+
+.playerBox button:hover{
+
+    transform:scale(1.05);
+
+    background:#ffb347;
+
+}
+
+.levelBox{
+
+    background:#1d1d1d;
+
+    border:2px solid orange;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    margin-bottom:50px;
+
+}
+
+.levelBox h2{
+
+    margin-top:0;
+
+}
+
+.xpBar{
+
+    width:100%;
+
+    height:35px;
+
+    background:#2b2b2b;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    margin-top:20px;
+
+}
+
+#xpFill{
+
+    width:0%;
+
+    height:100%;
+
+    background:linear-gradient(90deg,#ff6a00,#ffb000);
+
+    transition:0.6s;
+
+}
+
+#xpText{
+
+    font-size:20px;
+
+    color:white;
+
+}
+
+#levels{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+
+    gap:25px;
+
+    margin-top:35px;
+
+}
+
+.level{
+
+    background:#1c1c1c;
+
+    border:2px solid #444;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    padding:20px;
+
+    transition:.25s;
+
+    cursor:pointer;
+
+}
+
+.level:hover{
+
+    transform:translateY(-6px);
+
+    border-color:orange;
+
+}
+
+.level h2{
+
+    color:orange;
+
+    margin-bottom:15px;
+
+}
+
+.reward{
+
+    color:#d7d7d7;
+
+    font-size:15px;
+
+    margin-top:10px;
+
+}
+
+.locked{
+
+    opacity:.45;
+
+}
+
+.current{
+
+    border:2px solid orange;
+
+    box-shadow:0px 0px 20px orange;
+
+}
+
+.finished{
+
+    border:2px solid lime;
+
+    box-shadow:0px 0px 20px lime;
+
+}
+
+@media(max-width:800px){
+
+.pass-container{
+
+padding:15px;
+
+}
+
+.pass-container h1{
+
+font-size:42px;
+
+}
+
+.playerBox input{
+
+width:100%;
+
+margin-bottom:15px;
+
+}
+
+.playerBox button{
+
+margin-left:0;
+
+width:100%;
+
+}
+
+}
