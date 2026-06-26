@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>NEO Pass</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pass.css">
+</head>
+
+<body>
+
+<div class="pass-container">
+
+<h1>🟠 NEO PASS</h1>
+
+<div class="playerBox">
+
+    <h2>Spieler</h2>
+
+    <input
+        id="playerName"
+        type="text"
+        placeholder="Minecraft-Name">
+
+    <button onclick="saveName()">
+        Speichern
+    </button>
+
+</div>
+
+
+<div class="levelBox">
+
+<h2 id="welcomeName">
+
+Willkommen
+
+</h2>
+
+<h3>
+
+Level 1
+
+</h3>
+
+<div class="xpBar">
+
+<div id="xpFill"></div>
+
+</div>
+
+<p>
+
+<span id="xpText">
+
+0 / 100 XP
+
+</span>
+
+</p>
+
+</div>
+
+
+<h2>
+
+Battle Pass
+
+</h2>
+
+<div id="levels">
+
+</div>
+
+</div>
+
+
+<script src="pass.js"></script>
+
+</body>
+
+</html>
