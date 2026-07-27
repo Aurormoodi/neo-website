@@ -1117,6 +1117,183 @@ accept.addEventListener("click", () => {
     </div>
 
 </footer>
+<script>
+
+const questions=[
+
+{
+
+question:"Wie erhält man NeoGems?",
+
+answers:[
+
+"Durch aktives Helfen",
+
+"Gar nicht",
+
+"Nur durch Events",
+
+"Mit Echtgeld"
+
+],
+
+correct:0
+
+},
+
+{
+
+question:"Seit wann existiert NEO?",
+
+answers:[
+
+"2021",
+
+"2022",
+
+"2023",
+
+"2024"
+
+],
+
+correct:2
+
+},
+
+{
+
+question:"Was ist der Clan Hub?",
+
+answers:[
+
+"Ein Event",
+
+"Der Mittelpunkt des Clans",
+
+"Eine Farm",
+
+"Ein Shop"
+
+],
+
+correct:1
+
+}
+
+];
+
+let currentQuestion=0;
+
+let score=0;
+
+let selected=[];
+
+const startBtn=document.getElementById("startQuiz");
+
+const question=document.getElementById("question");
+
+const answers=document.getElementById("answers");
+
+const next=document.getElementById("nextQuestion");
+
+const progress=document.getElementById("progressFill");
+
+startBtn.onclick=()=>{
+
+selected=[...questions];
+
+currentQuestion=0;
+
+score=0;
+
+document.querySelector(".academy-box").style.display="none";
+
+showQuestion();
+
+};
+
+function showQuestion(){
+
+next.style.display="none";
+
+let q=selected[currentQuestion];
+
+question.innerHTML="Frage "+(currentQuestion+1)+" von "+selected.length+"<br><br>"+q.question;
+
+answers.innerHTML="";
+
+progress.style.width=((currentQuestion)/selected.length*100)+"%";
+
+q.answers.forEach((a,i)=>{
+
+let b=document.createElement("button");
+
+b.className="answer";
+
+b.innerHTML=a;
+
+b.onclick=()=>checkAnswer(i,b);
+
+answers.appendChild(b);
+
+});
+
+}
+
+function checkAnswer(index,button){
+
+let q=selected[currentQuestion];
+
+document.querySelectorAll(".answer").forEach(x=>x.disabled=true);
+
+if(index===q.correct){
+
+button.classList.add("correct");
+
+score++;
+
+}else{
+
+button.classList.add("wrong");
+
+document.querySelectorAll(".answer")[q.correct].classList.add("correct");
+
+}
+
+next.style.display="inline-block";
+
+}
+
+next.onclick=()=>{
+
+currentQuestion++;
+
+if(currentQuestion>=selected.length){
+
+finishQuiz();
+
+return;
+
+}
+
+showQuestion();
+
+};
+
+function finishQuiz(){
+
+progress.style.width="100%";
+
+question.innerHTML="Quiz beendet!";
+
+answers.innerHTML="<h2>"+score+" / "+selected.length+" Punkte</h2>";
+
+next.style.display="none";
+
+}
+
+</script>
     
 </body>  
 </html>
