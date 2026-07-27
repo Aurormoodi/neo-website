@@ -2315,38 +2315,3 @@ cursor:pointer;
 font-size:18px;
 
 }
-
-const player = document.getElementById("academyName").value || "Unbekannt";
-
-const passed = score >= 8;
-
-fetch("https://discord.com/api/webhooks/1531392154507935785/CHbAgURssXeOts4ZynmfaUE5SfgQta8bTaLToXc_zcu8MyfBaKrdWvLyA4SB04EdbTL", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-        embeds: [{
-            title: "🎓 NEO Academy",
-            color: passed ? 5763719 : 15548997,
-            fields: [
-                {
-                    name: "👤 Spieler",
-                    value: player,
-                    inline: true
-                },
-                {
-                    name: "📊 Ergebnis",
-                    value: `${score} / ${selected.length}`,
-                    inline: true
-                },
-                {
-                    name: "🏆 Status",
-                    value: passed ? "✅ Bestanden" : "❌ Nicht bestanden",
-                    inline: false
-                }
-            ],
-            timestamp: new Date().toISOString()
-        }]
-    })
-});
