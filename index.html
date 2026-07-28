@@ -1525,7 +1525,13 @@ next.style.display="none";
 
 const player = document.getElementById("academyName").value || "Unbekannt";
 
-const passed = true;
+const passed = Number(score) >= 8;
+
+alert(
+    "score = " + score +
+    "\ntype = " + typeof score +
+    "\npassed = " + passed
+);
 
     alert("Passed: " + passed);
 
