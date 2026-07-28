@@ -1513,17 +1513,16 @@ progress.style.width="100%";
 
 question.innerHTML="Quiz beendet!";
 
-answers.innerHTML="<h2>"+score+" / "+selected.length+" Punkte</h2>";
+const passed = score >= 8;
+
+answers.innerHTML = `
+<h2>${score} / ${selected.length} Punkte</h2>
+<p>Status: ${passed ? "✅ Bestanden" : "❌ Nicht bestanden"}</p>
+`;
 
 next.style.display="none";
 
-}
-
 const player = document.getElementById("academyName").value || "Unbekannt";
-
-console.log("Score:", score);
-console.log("Fragen:", selected.length);
-console.log("Bestanden:", score >= 8);
     
 const passed = score >= 8;
 
