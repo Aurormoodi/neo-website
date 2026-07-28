@@ -1509,22 +1509,24 @@ showQuestion();
 
 function finishQuiz(){
 
-progress.style.width="100%";
+    progress.style.width="100%";
 
-question.innerHTML="Quiz beendet!";
+    question.innerHTML="Quiz beendet!";
 
-const passed = score >= 8;
+    next.style.display="none";
 
-answers.innerHTML = `
-<h2>${score} / ${selected.length} Punkte</h2>
-<p>Status: ${passed ? "✅ Bestanden" : "❌ Nicht bestanden"}</p>
-`;
+    const passed = score >= 8;
+
+    answers.innerHTML = `
+        <h2>${score} / ${selected.length} Punkte</h2>
+        <h3>${passed ? "✅ Bestanden" : "❌ Nicht bestanden"}</h3>
+    `;
+
+}
 
 next.style.display="none";
 
 const player = document.getElementById("academyName").value || "Unbekannt";
-    
-const passed = score >= 8;
 
 fetch("https://discord.com/api/webhooks/1531392154507935785/CHbAgURssXeOts4ZynmfaUE5SfgQta8bTaLToXc_zcu8MyfBaKrdWvLyA4SB04EdbTL-", {
     method: "POST",
