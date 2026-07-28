@@ -1527,6 +1527,8 @@ const player = document.getElementById("academyName").value || "Unbekannt";
 
 const passed = score >= 8;
 
+    alert("Passed: " + passed);
+
 fetch("https://discord.com/api/webhooks/1531392154507935785/CHbAgURssXeOts4ZynmfaUE5SfgQta8bTaLToXc_zcu8MyfBaKrdWvLyA4SB04EdbTL-", {
     method: "POST",
     headers: {
