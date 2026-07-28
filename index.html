@@ -1467,92 +1467,117 @@ answers.appendChild(b);
 
 }
 
-function checkAnswer(index,button){
+function checkAnswer(index, button){
 
-let q=selected[currentQuestion];
+    const q = selected[currentQuestion];
 
-document.querySelectorAll(".answer").forEach(x=>x.disabled=true);
+    document.querySelectorAll(".answer").forEach(btn => btn.disabled = true);
 
-if(index===q.correct){
+    if(index === q.correct){
 
-button.classList.add("correct");
+        button.classList.add("correct");
+        score++;
 
-score++;
+    }else{
 
-}else{
+        button.classList.add("wrong");
+        document.querySelectorAll(".answer")[q.correct].classList.add("correct");
 
-button.classList.add("wrong");
+    }
 
-document.querySelectorAll(".answer")[q.correct].classList.add("correct");
-
-}
-
-next.style.display="inline-block";
+    next.style.display = "inline-block";
 
 }
 
-next.onclick=()=>{
+next.onclick = () => {
 
-currentQuestion++;
+    currentQuestion++;
 
-if(currentQuestion>=selected.length){
+    if(currentQuestion >= selected.length){
 
-finishQuiz();
+        finishQuiz();
+        return;
 
-return;
+    }
 
-}
-
-showQuestion();
+    showQuestion();
 
 };
 
 function finishQuiz(){
 
-    progress.style.width="100%";
+    progress.style.width = "100%";
 
-    question.innerHTML="Quiz beendet!";
+    question.innerHTML = "Quiz beendet!";
 
-    next.style.display="none";
+    next.style.display = "none";
 
     const passed = score >= 8;
 
     answers.innerHTML = `
         <h2>${score} / ${selected.length} Punkte</h2>
-        <h3>${passed ? "✅ Bestanden" : "❌ Nicht bestanden"}</h3>
+        <p style="font-size:20px;font-weight:bold;color:${passed ? "#4CAF50" : "#F44336"};">
+            ${passed ? "✅ Bestanden" : "❌ Nicht bestanden"}
+        </p>
     `;
 
-    const player = document.getElementById("academyName").value || "Unbekannt";
+    const player =
+        document.getElementById("academyName")?.value.trim() || "Unbekannt";
 
     fetch("https://discord.com/api/webhooks/1531392154507935785/CHbAgURssXeOts4ZynmfaUE5SfgQta8bTaLToXc_zcu8MyfBaKrdWvLyA4SB04EdbTL-", {
+
         method: "POST",
+
         headers: {
             "Content-Type": "application/json"
         },
+
         body: JSON.stringify({
+
             embeds: [{
+
                 title: "🎓 NEO Academy",
+
                 color: passed ? 5763719 : 15548997,
+
                 fields: [
+
                     {
                         name: "👤 Spieler",
                         value: player,
                         inline: true
                     },
+
                     {
-                        name: "📊 Ergebnis",
+                        name: "📊 Punkte",
                         value: `${score} / ${selected.length}`,
                         inline: true
                     },
+
                     {
-                        name: "🏆 Status",
+                        name: "🏆 Ergebnis",
                         value: passed ? "✅ Bestanden" : "❌ Nicht bestanden",
                         inline: false
                     }
+
                 ],
+
                 timestamp: new Date().toISOString()
+
             }]
+
         })
+
+    })
+    .then(response => {
+
+        console.log("Discord:", response.status);
+
+    })
+    .catch(error => {
+
+        console.error("Webhook Fehler:", error);
+
     });
 
 }
