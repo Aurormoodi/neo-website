@@ -1421,7 +1421,21 @@ const next=document.getElementById("nextQuestion");
 
 const progress=document.getElementById("progressFill");
 
-startBtn.onclick=()=>{
+startBtn.onclick = () => {
+
+    alert("Button funktioniert!");
+
+    selected=[...questions]
+    .sort(()=>Math.random()-0.5)
+    .slice(0,10);
+
+    currentQuestion=0;
+    score=0;
+
+    document.querySelector(".academy-box").style.display="none";
+
+    showQuestion();
+};
 
 selected=[...questions]
 
