@@ -1535,7 +1535,12 @@ alert(
 
     alert("Passed: " + passed);
 
-fetch("https://discord.com/api/webhooks/1531392154507935785/CHbAgURssXeOts4ZynmfaUE5SfgQta8bTaLToXc_zcu8MyfBaKrdWvLyA4SB04EdbTL-", {
+    console.log("Webhook wird gesendet");
+
+    fetch("https://discord.com/api/webhooks/1531392154507935785/CHbAgURssXeOts4ZynmfaUE5SfgQta8bTaLToXc_zcu8MyfBaKrdWvLyA4SB04EdbTL-", {
+  
+    console.log("Fetch wurde aufgerufen");
+   
     method: "POST",
     headers: {
         "Content-Type": "application/json"
